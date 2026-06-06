@@ -1,0 +1,2 @@
+[webserver]
+172.16.88.96 ansible_user=synnefo

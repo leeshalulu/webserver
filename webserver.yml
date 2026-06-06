@@ -1,0 +1,16 @@
+---
+- name: install and configure webserver
+  hosts: all
+  become: yes
+  tasks:
+    - name: install apache webserver
+      yum:
+        name: httpd
+        state: present
+        use_backend: dnf
+
+    - name: start and enable httpd
+      service:
+         name: httpd
+         state: started
+         enabled: yes
